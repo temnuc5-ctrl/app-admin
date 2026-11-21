@@ -4,9 +4,15 @@ functions = "netlify/functions"
 publish = "dist/spa"
 
 [functions]
-node_bundler = "esbuild"
-external_node_modules = ["exceljs", "chartsheet"]
-included_files = ["node_modules/exceljs/**", "node_modules/chartsheet/**"]
+  node_bundler = "esbuild"
+  external_node_modules = ["exceljs", "chartsheet", "web-push", "serverless-http"]
+  included_files = [
+    "node_modules/exceljs/**",
+    "node_modules/chartsheet/**",
+    "node_modules/web-push/**",
+    "node_modules/serverless-http/**"
+  ]
+
 [[redirects]]
 force = true
 from = "/api/*"
